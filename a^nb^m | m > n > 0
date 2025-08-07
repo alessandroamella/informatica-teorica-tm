@@ -1,0 +1,33 @@
+name: a^nb^m | m > n > 0
+init: q0
+accept: q5
+
+q0,a
+q1,_,>
+
+q1,a
+q1,a,>
+
+q1,b
+q1,b,>
+
+q1,_
+q2,_,<
+
+q2,b
+q3,_,<
+
+q3,a
+q3,a,<
+
+q3,b
+q3,b,<
+
+q3,_
+q4,_,>
+
+q4,b
+q5,b,>
+
+q4,a
+q1,_,>
