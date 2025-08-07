@@ -5,8 +5,8 @@ format_latex() {
     local filename="$1"
     # Replace 'in' with '\in'
     filename=$(echo "$filename" | sed 's/ in / \\in /g')
-    # Escape # characters for LaTeX math mode using \sharp
-    filename=$(echo "$filename" | sed 's/#/\\sharp/g')
+    # Escape # characters for LaTeX math mode using \sharp with space
+    filename=$(echo "$filename" | sed 's/#/\\sharp /g')
     # Wrap in LaTeX math delimiters
     echo "\$${filename}\$"
 }
